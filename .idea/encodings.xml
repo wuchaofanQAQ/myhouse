@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../2am" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-dao-support" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-main" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-mq-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-mq-producer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-rpc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-service-support" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-task-scheduler" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-web" charset="UTF-8" />
+  </component>
+</project>

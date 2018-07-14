@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="2am-dao-support" />
+        <module name="2am-domain" />
+        <module name="2am-main" />
+        <module name="2am-manager" />
+        <module name="2am-mq-consumer" />
+        <module name="2am-mq-producer" />
+        <module name="2am-rpc" />
+        <module name="2am-service-api" />
+        <module name="2am-service-support" />
+        <module name="2am-task-scheduler" />
+        <module name="2am-web" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
