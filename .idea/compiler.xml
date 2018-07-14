@@ -19,5 +19,8 @@
         <module name="2am-web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="2am-jsf-main" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -7,7 +7,7 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-    <context:component-scan base-package="com.2am">
+    <context:component-scan base-package="com.story">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
@@ -22,15 +22,22 @@
         <property name="url" value="${db.url}"/>
     </bean>
 
+    <bean id="pageniztion" class=""/>
+
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
-        <property name="typeAliases" value="com.2am.domain"/>
+        <property name="typeAliases" value="com.story.domain"/>
         <!--<property name="configLocation" value="classpath:mybatis-config.xml"/>-->
+        <property name="plugins">
+            <array>
+                <ref bean="pageniztion"/>
+            </array>
+        </property>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.2am.dao"/>
+        <property name="basePackage" value="com.story.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
