@@ -2,9 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../2am" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../2am/2am-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../2am/2am-dao-support" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../2am/2am-domain" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../2am/2am-jsf-main" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../2am/2am-main" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../2am/2am-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../2am/2am-mq-consumer" charset="UTF-8" />

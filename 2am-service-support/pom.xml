@@ -16,7 +16,13 @@
 
         <dependency>
             <groupId>com.2am</groupId>
-            <artifactId>2am-dao-support</artifactId>
+            <artifactId>2am-manager</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.2am</groupId>
+            <artifactId>2am-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 

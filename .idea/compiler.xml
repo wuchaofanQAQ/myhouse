@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="2am-common" />
         <module name="2am-dao-support" />
         <module name="2am-domain" />
         <module name="2am-main" />
