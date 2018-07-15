@@ -12,10 +12,16 @@
     </context:component-scan>
 
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:config/db.properties"/>
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:config/db.properties</value>
+            </list>
+        </property>
     </bean>
 
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="username" value="${db.username}"/>
         <property name="password" value="${db.password}"/>
         <property name="driverClassName" value="${db.driver}"/>
@@ -24,9 +30,9 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <!--<property name="mapperLocations" value="classpath:mapper/*.xml"/>-->
-        <!--<property name="typeAliases" value="com.story.domain"/>-->
-        <!--<property name="configLocation" value="classpath:mybatis-config.xml"/>-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <property name="typeAliasesPackage" value="com.story.domain"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
