@@ -23,7 +23,7 @@ public class TestJDBC {
     SqlSessionFactory sqlSessionFactory;
 
     @Test
-    public void getConnection() throws SQLException {
+    public void testSqlSession() throws SQLException {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserDao userDao = sqlSession.getMapper(UserDao.class);
         List<UserInfo> allUser = userDao.getAllUser();

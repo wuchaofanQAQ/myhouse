@@ -14,11 +14,51 @@
 
     <mvc:annotation-driven/>
 
+    <mvc:default-servlet-handler/>
+
+    <!--velocity模板配置-->
+    <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/"/>
+        <property name="velocityProperties">
+            <props>
+                <prop key="input.encoding">UTF-8</prop>
+                <prop key="output.encoding">UTF-8</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolverVelocity" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+        <property name="cache" value="false"/>
+        <property name="layoutUrl" value="/layout/default.vm"/>
+        <property name="prefix" value="/views/"/>
+        <property name="suffix" value=".vm"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/>
+    </bean>
+
+    <!-- 避免IE执行AJAX时，返回JSON出现下载文件 -->
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+        <property name="jsonpParameterNames">
+            <set>
+                <value>jsonp</value>
+                <value>callback</value>
+            </set>
+        </property>
+    </bean>
+
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="UTF-8"/>
         <property name="maxUploadSize" value="10485760"/>
     </bean>
-
-    <mvc:default-servlet-handler/>
 
 </beans>
