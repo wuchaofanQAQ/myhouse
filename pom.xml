@@ -38,7 +38,7 @@
         <log4j.version>2.5</log4j.version>
         <junit.version>4.12</junit.version>
         <pagehelper.version>4.1.4</pagehelper.version>
-        <jackson.version>2.5.3</jackson.version>
+        <jackson.version>2.13.4.1</jackson.version>
         <jackson.mapper.version>1.9.7</jackson.mapper.version>
         <commons.lang3.version>3.1</commons.lang3.version>
         <cglib.version>2.2</cglib.version>
